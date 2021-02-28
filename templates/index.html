@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{%block title%}
+{{title}}
+{%endblock %}
+
+{% block headline %}
+<h1>{{title}}</h1>
+<p>Let's master flask!</p>
+{% endblock %}
+
+{% block main_content %}
+{% if flg %}
+<div class = 'form_container'>
+    <form method = "POST" action = "/">
+    <ul>
+    <li>name <br>
+        <input name = "name" type="text">
+    </li> <br>
+    <li>sex: <br>
+            <input type="checkbox" name = "check" id = "ck1">
+            <label for="ck1">male</label>
+            <input type="checkbox" name="check" id = "ck2">
+            <label for="ck2">female</label>
+            <input type="checkbox" name= "check" id = "ck3">
+            <label for="ck3">other</label>
+    </li> <br>
+    <li>message: <br>
+        <input type="text" name="message">
+    </li> <br>
+    <input type="submit">
+    </ul> 
+    </form> 
+</div>
+{% else %}
+<div class = 'complite_screen'>
+    <h2>completed submission!</h2>
+    <p>name: {{name}}</p>
+    <p>sex: {{sex}}</p>
+    <p>message: {{message}}</p>
+</div>
+{% endif %}
+{% endblock %}
+
+{% block footer %}
+<p>email address: nara_ryoya@icloud.com</p>
+{% endblock %}

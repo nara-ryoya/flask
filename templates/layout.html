@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title%}{% endblock %}</title>
+        <meta charset='utf-8'>
+        <link rel="stylesheet", href="{{url_for('static', filename = 'stylesheet.css')}}">
+    </head>
+    <body>
+        <header>
+            {% block headline %}{% endblock %}
+        </header>
+        {% block main_content %}{% endblock %}
+        <footer>
+            {%block footer %}{% endblock %}
+        </footer>
+    </body>
+</html>
